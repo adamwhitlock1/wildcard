@@ -12,6 +12,9 @@ $collector->get('/', function(){
     require_once "index.view.php";
 });
 
+function useUtils() {
+    return new Utils();
+}
 
 $collector->get('/{t}/{w}/{h}', function($t, $w, $h ){
     //create instance of image manager and use image magick for driver
@@ -20,14 +23,16 @@ $collector->get('/{t}/{w}/{h}', function($t, $w, $h ){
         $h = 2000;
     }
     $img = new ImageManager(array('driver' => 'imagick'));
-    $utils = new Utils();
-    $path = $utils->genPic($t);
+    $path = useUtils()->genPic($t);
     return $img->make($path)->fit($w, $h)->response("jpg", 60);
 });
 
 $collector->get('/stats', function() {
-    $utils = new Utils();
-    return $utils->updateStats();
+    return useUtils()->updateStats();
+});
+
+$collector->get('/dirs', function() {
+    return json_encode(useUtils()->getDirNames() );
 });
 
 

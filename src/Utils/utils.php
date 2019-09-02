@@ -42,33 +42,26 @@ class Utils {
         return json_encode($stats);
     }
 
+    public function getDirNames(){
+        $dir = $this->_path . "/public";
+        $dirs = glob($dir . '/*/');
+        $res = array();
+        foreach ( $dirs as $dirname ) {
+            $arr = explode('/', $dirname);
+            $index = count($arr) - 2;
+            $res[] = $arr[$index];
+        }
+        return $res;
+        // return json_encode($dirs);
+    }
+
     public function genPic($t)
     {
-        switch ($t) {
-            case "r":
-                $this->_dir = $this->randomDir($this->_path . "/public");
-                break;
-            case "bird":
-                $this->_dir = $this->_path . "/public/bird";
-                break;
-            case "bug":
-                $this->_dir = $this->_path . "/public/bug";
-                break;
-            case "cat":
-                $this->_dir = $this->_path . "/public/cat";
-                break;
-            case "dog":
-                $this->_dir = $this->_path . "/public/dog";
-                break;
-            case "fish":
-                $this->_dir = $this->_path . "/public/fish";
-                break;
-            case "lion":
-                $this->_dir = $this->_path . "/public/lion";
-                break;
-            case "tiger":
-                $this->_dir = $this->_path . "/public/tiger";
-                break;
+        $haystack = $this->getDirNames();
+        if ( in_array($t, $haystack) ) {
+            $this->_dir = $this->_path . "/public/" . $t;
+        } else {
+            $this->_dir = $this->randomDir($this->_path . "/public");
         }
         $this->updateStats();
         return $this->randomPic($this->_dir);

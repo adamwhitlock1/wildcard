@@ -3,7 +3,8 @@
     "require": {
         "guzzlehttp/guzzle": "^6.3",
         "intervention/image": "^2.5",
-        "phroute/phroute": "^2.1"
+        "phroute/phroute": "^2.1",
+        "ext-json": "*"
     },
     "authors": [
         {

@@ -14,7 +14,7 @@
 <h2 class="text-white text-2xl bg-blue-900 px-5 py-3 mt-4 border-b-4 border-blue-400 border-solid rounded-lg uppercase font-black tracking-widest">The endpoints</h2>
 
 <div class="flex -mx-2 mt-4">
-    <div class="w-1/2 px-2">
+    <div class="w-full md:w-1/2 px-2">
         <div class="p-6 bg-gray-200 border-b-4 border-gray-400 text-white rounded-lg shadow-lg">
             <code class="text-green-600 text-lg">https://wildcard.fun/r/{w}/{h}</code>
             <p class="mt-3 text-gray-700 font-light">This endpoint gets a random critter image at a desired width {w} &amp; height {h}</p>
@@ -24,7 +24,7 @@
         </div>
     </div>
 
-    <div class="w-1/2 px-2">
+    <div class="w-full md:w-1/2 px-2">
         <div class="p-6 bg-gray-200 border-b-4 border-gray-400 text-white rounded-lg shadow-lg">
             <code class="text-green-600 text-lg">https://wildcard.fun/{animal}/{w}/{h}</code>
             <p class="mt-3 text-gray-700 font-light">There are endpoints for each type of critter image.</p>

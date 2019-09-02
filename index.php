@@ -31,6 +31,25 @@ $collector->get('/stats', function() {
     return useUtils()->updateStats();
 });
 
+$collector->get('/homepage', function() {
+    return json_encode(
+        array(
+            "dirName" => useUtils()->getDirNames(),
+            "imageCount" => useUtils()->getImageTotal()
+        )
+    );
+});
+
+$collector->get('/data', function() {
+    return json_encode(
+        array(
+            "dirName" => useUtils()->getDirData(),
+            "totalImages" => useUtils()->getImageTotal(),
+            "totalUsage" => useUtils()->readStats()->count
+        )
+    );
+});
+
 $collector->get('/dirs', function() {
     return json_encode(useUtils()->getDirNames() );
 });

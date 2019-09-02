@@ -1,0 +1,43 @@
+{
+  "name": "wildcard",
+  "version": "1.0.0",
+  "description": "An image placeholder service.",
+  "main": "index.js",
+  "repository": "https://github.com/madwire-media/madnify.git",
+  "author": "adam.whitlock@madwiremedia.com",
+  "license": "MIT",
+  "scripts": {
+    "watch": "webpack --mode development --progress --colors --watch --hide-modules",
+    "build": "webpack --mode production",
+    "servePHP": "php -S 127.0.0.1:9999",
+    "compile": "webpack --mode development --progress --colors --watch --hide-modules",
+    "cypress": "cypress open",
+    "serveE2E": "WAIT_FOR_MESSAGE='Reloading Browsers...' cypressAppWatcher npm run compile"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "css-loader": "^3.0.0",
+    "vue-loader": "^15.7.0",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "lodash": "^4.17.11",
+    "vue": "^2.6.10",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.1"
+  }
+}

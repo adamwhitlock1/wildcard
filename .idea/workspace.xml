@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wildcard.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wildcard.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/components/card.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/components/footer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/components/navBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/frontend.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/pages/about.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/pages/home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/store/modules/mod1.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-example.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Utils/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/utils.php" afterDir="false" />
@@ -18,7 +28,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -58,6 +68,9 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Templates" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/bird" />
       <recent name="$PROJECT_DIR$/public/bug" />
@@ -88,7 +101,8 @@
       <option name="presentableId" value="Default" />
       <updated>1567304214199</updated>
       <workItem from="1567304215264" duration="35668000" />
-      <workItem from="1567441642466" duration="3262000" />
+      <workItem from="1567441642466" duration="3948000" />
+      <workItem from="1567451864193" duration="13981000" />
     </task>
     <task id="LOCAL-00001" summary="built homepage design">
       <created>1567395997273</created>
@@ -125,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567400156860</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactored category endpoints for new additions">
+      <created>1567445520925</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1567445520925</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,6 +171,7 @@
     <MESSAGE value="more responsive stuff" />
     <MESSAGE value="styling" />
     <MESSAGE value="added count of views to homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="added count of views to homepage" />
+    <MESSAGE value="refactored category endpoints for new additions" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored category endpoints for new additions" />
   </component>
 </project>

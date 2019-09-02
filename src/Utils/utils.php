@@ -1,6 +1,8 @@
 <?php
 namespace App;
 
+use FilesystemIterator;
+
 class Utils {
 
     private $_path;
@@ -25,7 +27,7 @@ class Utils {
         return $dirs[$rand_dir];
     }
 
-    public static function readStats()
+    public function readStats()
     {
         return json_decode(file_get_contents("stats.json"));
     }
@@ -33,8 +35,7 @@ class Utils {
     public function updateStats()
     {
         $filename = $this->_path . "/stats.json";
-        $contents = $this::readStats();
-
+        $contents = $this->readStats();
         $handle = fopen($filename, "w+");
         $stats = array( "count" => $contents->count + 1);
         fwrite($handle, json_encode($stats));
@@ -52,7 +53,33 @@ class Utils {
             $res[] = $arr[$index];
         }
         return $res;
+    }
+
+    public function getDirData(){
+        $dir = $this->_path . "/public";
+        $dirs = glob($dir . '/*/');
+        $res = array();
+        foreach ( $dirs as $dirname ) {
+            $arr = explode('/', $dirname);
+            $index = count($arr) - 2;
+            $fi = new FilesystemIterator($this->_path . "/public/" . $arr[$index], FilesystemIterator::SKIP_DOTS);
+            $res[] = array (
+                "name" => $arr[$index],
+                "total" => iterator_count($fi)
+            );
+        }
+        return $res;
         // return json_encode($dirs);
+    }
+
+    public function getImageTotal() {
+        $total = 0;
+        foreach ($this->getDirNames() as $dir){
+            $fi = new FilesystemIterator($this->_path . "/public/" . $dir, FilesystemIterator::SKIP_DOTS);
+            $total = $total + iterator_count($fi);
+        }
+        return $total;
+
     }
 
     public function genPic($t)

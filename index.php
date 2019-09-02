@@ -25,6 +25,12 @@ $collector->get('/{t}/{w}/{h}', function($t, $w, $h ){
     return $img->make($path)->fit($w, $h)->response("jpg", 60);
 });
 
+$collector->get('/stats', function() {
+    $utils = new Utils();
+    return $utils->updateStats();
+});
+
+
 $dispatcher = new Dispatcher($collector->getData());
 $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 echo $response;

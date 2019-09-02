@@ -11,10 +11,6 @@ class Utils {
         $this->_path = $_SERVER['DOCUMENT_ROOT'];
     }
 
-    public function getPath() {
-        return $this->_path;
-    }
-
     public function randomPic($dir)
     {
         $files = glob($dir . '/*.*');
@@ -29,7 +25,25 @@ class Utils {
         return $dirs[$rand_dir];
     }
 
-    public function genPic($t) {
+    public static function readStats()
+    {
+        return json_decode(file_get_contents("stats.json"));
+    }
+
+    public function updateStats()
+    {
+        $filename = $this->_path . "/stats.json";
+        $contents = $this::readStats();
+
+        $handle = fopen($filename, "w+");
+        $stats = array( "count" => $contents->count + 1);
+        fwrite($handle, json_encode($stats));
+        fclose($handle);
+        return json_encode($stats);
+    }
+
+    public function genPic($t)
+    {
         switch ($t) {
             case "r":
                 $this->_dir = $this->randomDir($this->_path . "/public");
@@ -56,6 +70,7 @@ class Utils {
                 $this->_dir = $this->_path . "/public/tiger";
                 break;
         }
+        $this->updateStats();
         return $this->randomPic($this->_dir);
     }
 }

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/stats.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/utils.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567304214199</updated>
-      <workItem from="1567304215264" duration="31937000" />
+      <workItem from="1567304215264" duration="34553000" />
     </task>
     <task id="LOCAL-00001" summary="built homepage design">
       <created>1567395997273</created>
@@ -90,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567396527132</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="styling">
+      <created>1567397509609</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1567397509609</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +121,8 @@
     <MESSAGE value="built homepage design" />
     <MESSAGE value="responsive tweak" />
     <MESSAGE value="more responsive stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="more responsive stuff" />
+    <MESSAGE value="styling" />
+    <option name="LAST_COMMIT_MESSAGE" value="styling" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

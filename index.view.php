@@ -1,3 +1,8 @@
+<?php
+require_once "vendor/autoload.php";
+use App\Utils;
+$count = Utils::readStats()->count;
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -22,8 +27,9 @@
 <body>
 <div class="site-container relative">
     <div class="relative container mx-auto p-4">
-        <h1 class="text-4xl font-black font-mono text-blue-800 mb-2"><span class="text-6xl">*</span> wildcard.fun</h1>
-        <p class="mb-12 font-light text-gray-700">A simple image placeholder service for different critters.</p>
+        <h1 class="text-4xl font-black font-mono text-blue-800 m-2"><span class="text-6xl">*</span> wildcard.fun</h1>
+        <p class="font-light text-gray-700 mx-2">A simple image placeholder service for different critters.</p>
+        <p class="mb-12 font-light text-gray-700 mx-2">Served <span class="font-black"><?=$count?></span> images and counting.</p>
 
         <h2 class="text-white text-2xl bg-blue-900 px-5 py-3 mt-4 border-b-4 border-blue-400 border-solid rounded-lg uppercase font-black tracking-widest">The endpoints</h2>
 

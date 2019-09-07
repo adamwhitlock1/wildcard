@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/components/MainBox.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/frontend/components/MainCanvas.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/components/navBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/navBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/router/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +22,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="wildcard" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,7 +94,8 @@
       <updated>1567304214199</updated>
       <workItem from="1567304215264" duration="35668000" />
       <workItem from="1567441642466" duration="3948000" />
-      <workItem from="1567451864193" duration="14372000" />
+      <workItem from="1567451864193" duration="14972000" />
+      <workItem from="1567881409850" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="built homepage design">
       <created>1567395997273</created>

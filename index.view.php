@@ -11,7 +11,7 @@
 
 <div class="site-container relative">
 
-    <div class="relative container mx-auto">
+    <div class="relative mx-auto p-4">
         <div id="wildcard-app"></div>
     </div>
 </div>

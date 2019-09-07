@@ -2,7 +2,7 @@
   <div class="bg-transparent">
     <nav-bar class="mt-6"></nav-bar>
 
-    <div class="shadow-2xl mt-8 px-6 pb-12 rounded-lg">
+    <div class="shadow-2xl mt-8 px-3 pb-12 rounded-lg">
       <router-view></router-view>
     </div>
 
@@ -36,7 +36,7 @@ const axios = require('axios');
     methods: {
       setAllState(){
         axios.get('/data').then((res)=>{
-          console.log(res.data);
+          // console.log(res.data);
           this.$store.commit('setAllState', res.data)
         })
       }

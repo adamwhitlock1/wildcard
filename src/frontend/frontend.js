@@ -6,6 +6,8 @@ import store from './store'
 import App from './App.vue'
 
 
+Vue.prototype.$broadcast = new BroadcastChannel('main');
+
 new Vue({
   el: '#wildcard-app',
   router,

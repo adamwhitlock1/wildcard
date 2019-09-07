@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/frontend/components/MainBox.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/frontend/components/MainCanvas.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/navBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/navBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/frontend.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/frontend.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/pages/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/pages/create.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +91,7 @@
       <workItem from="1567304215264" duration="35668000" />
       <workItem from="1567441642466" duration="3948000" />
       <workItem from="1567451864193" duration="14972000" />
-      <workItem from="1567881409850" duration="4094000" />
+      <workItem from="1567881409850" duration="8079000" />
     </task>
     <task id="LOCAL-00001" summary="built homepage design">
       <created>1567395997273</created>
@@ -146,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1567466971411</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="making a create page for an graphic editor">
+      <created>1567885624051</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1567885624051</updated>
+    </task>
+    <task id="LOCAL-00009" summary="create page added">
+      <created>1567885696467</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1567885696467</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +183,8 @@
     <MESSAGE value="added count of views to homepage" />
     <MESSAGE value="refactored category endpoints for new additions" />
     <MESSAGE value="vue in the house" />
-    <option name="LAST_COMMIT_MESSAGE" value="vue in the house" />
+    <MESSAGE value="making a create page for an graphic editor" />
+    <MESSAGE value="create page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="create page added" />
   </component>
 </project>

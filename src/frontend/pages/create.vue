@@ -3,8 +3,9 @@
     <h1 class="text-4xl font-hairline text-center mt-6">Create a custom placeholder</h1>
     <div class="flex">
       <div class="w-1/4">
-        Left sidebar
-        <button @click="ping">Ping</button>
+          <p>Left sidebar</p>
+          <p v-if="instance">{{ instance }}</p>
+        <button @click="ping('testObj', {val: 125, color: 'red'})" class="px-3 py-4 bg-green-500 text-white">Ping</button>
       </div>
       <div class="w-1/2">
         Canvas section
@@ -14,8 +15,8 @@
             :x2="30"
             :y1="100"
             :y2="50"
-            :color="chartValues[1].color"
-            :value="chartValues[1].val"
+            :color="testObj.color"
+            :value="testObj.val"
           />
         </main-canvas>
         <canvas id="editor" class="w-full"></canvas>
@@ -41,31 +42,40 @@
 
     data () {
       return {
-        chartValues: [
-          {val: 24, color: 'red'},
-          {val: 32, color: '#0f0'},
-          {val: 66, color: 'rebeccapurple'},
-          {val: 1, color: 'green'},
-          {val: 28, color: 'blue'},
-          {val: 60, color: 'rgba(150, 100, 0, 0.2)'},
-        ],
-        broadcast: null
+        testObj: {
+          val: 100,
+          color: "green"
+        },
+        broadcast: null,
+        instance: null
       }
     },
 
     // Randomly selects a value to randomly increment or decrement every 16 ms.
     // Not really important, just demonstrates that reactivity still works.
     mounted () {
-      this.broadcast = new BroadcastChannel('main-channel');
-      this.broadcast.onmessage = e => {
-        console.log(e.data);
-        this.chartValues[1].val = e.data.val;
+      this.broadcast = this.$broadcast;
+      let now = new Date();
+      this.instance = now.getTime();
+      this.broadcast.onmessage = event => {
+        console.log(event);
+        let dataLength = event.data.length;
+        for (let i = 0; i < dataLength; i++){
+          let keys = Object.keys(event.data[i]);
+          let keysLength = keys.length;
+          console.log(keysLength);
+          for ( let ii = 0; ii < keysLength; ii++){
+            this[keys[ii]] = event.data[i][keys[ii]];
+          }
+        }
       }
     },
     methods: {
-      ping(){
-        this.broadcast.postMessage({val: 100});
-        this.chartValues[1].val = 125
+      ping(obj, val){
+        let postObj = {};
+        postObj[obj] = val;
+        this.broadcast.postMessage([postObj]);
+        this[obj] = val;
       },
 
     }

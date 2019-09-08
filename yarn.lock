@@ -2117,6 +2117,11 @@ findup-sync@^2.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
+flatted@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.1.tgz#69e57caa8f0eacbc281d2e2cb458d46fdb449e08"
+  integrity sha512-a1hQMktqW9Nmqr5aktAux3JMNqaucxGcjtjWnZLHX7yyPCmlSV3M54nGYbqT8K+0GhF3NBgmJCc3ma+WOgX8Jg==
+
 flush-write-stream@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/flush-write-stream/-/flush-write-stream-1.1.1.tgz#8dd7d873a1babc207d94ead0c2e0e44276ebf2e8"
@@ -2857,6 +2862,11 @@ lodash.isfinite@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/lodash.isfinite/-/lodash.isfinite-3.3.2.tgz#fb89b65a9a80281833f0b7478b3a5104f898ebb3"
   integrity sha1-+4m2WpqAKBgz8LdHizpRBPiY67M=
+
+lodash.merge@^4.6.2:
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
+  integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
 
 lodash@^4, lodash@^4.17.10, lodash@^4.17.11:
   version "4.17.11"
@@ -4764,6 +4774,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
+vue-draggable-resizable@^2.0.0-rc2:
+  version "2.0.0-rc2"
+  resolved "https://registry.yarnpkg.com/vue-draggable-resizable/-/vue-draggable-resizable-2.0.0-rc2.tgz#492925541eabebeb5b805b2fafb358ff27927d24"
+  integrity sha512-ctVl5elVhRT3Py1vFqCOcbdCyFdbPq9Y0SQJ/96/MWcBQ4vod2pJNwWe00BS8H2iT7hCUaUJfMcMH8200L1jmg==
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
@@ -4779,6 +4794,11 @@ vue-loader@^15.7.0:
     loader-utils "^1.1.0"
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
+
+vue-persist@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/vue-persist/-/vue-persist-0.4.0.tgz#88aeabcdf5c65704363f585e03ba7a591783052c"
+  integrity sha512-j2MAsLVoFW3rHcfqDHniNpI46m8Llep8q0rxAzcAdwZdYQ6bZrw5NjzM3P57ka1pFMA4whrCUHtNtMxbF2HAsg==
 
 vue-router@^3.0.6:
   version "3.0.6"
@@ -4810,6 +4830,14 @@ vue@^2.6.10:
   version "2.6.10"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.10.tgz#a72b1a42a4d82a721ea438d1b6bf55e66195c637"
   integrity sha512-ImThpeNU9HbdZL3utgMCq0oiMzAkt1mcgy3/E6zWC/G6AaQoeuFdsl9nDhTDU3X1R6FK7nsIUuRACVcjI+A2GQ==
+
+vuex-persist@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vuex-persist/-/vuex-persist-2.1.0.tgz#16b549aace89892e8cf6f9e2bca457008df2a677"
+  integrity sha512-H9RqXHeynBQG60rUrsinYNLoRFXkSxh2Xx8kTVFuvLRQ9jZd3HLMvm713m2r1dN/pVZBUgiIzTu6uj5hBsAOqg==
+  dependencies:
+    flatted "^2.0.0"
+    lodash.merge "^4.6.2"
 
 vuex@^3.1.1:
   version "3.1.1"

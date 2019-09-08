@@ -1,6 +1,6 @@
 <template>
     <div class="main-canvas-wrapper">
-        <canvas ref="main-canvas"></canvas>
+        <canvas ref="main-canvas" style="width: 100%"></canvas>
         <slot></slot>
     </div>
 </template>
@@ -33,8 +33,6 @@
 
       // Resize the canvas to fit its parent's width.
       // Normally you'd use a more flexible resize system.
-      this.$refs['main-canvas'].width = this.$refs['main-canvas'].parentElement.clientWidth;
-      this.$refs['main-canvas'].height = this.$refs['main-canvas'].parentElement.clientHeight;
     }
   }
 </script>

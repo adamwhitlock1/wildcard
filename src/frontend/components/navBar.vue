@@ -23,12 +23,12 @@
             >
               about
             </router-link>
-            <router-link
-              class="border-b-2 border-solid border-white p-1 mx-4 text-base font-black text-blue-200 hover:text-white border-blue-200 hover:border-white leading-none"
-              to="/create"
-            >
-              create
-            </router-link>
+<!--            <router-link-->
+<!--              class="border-b-2 border-solid border-white p-1 mx-4 text-base font-black text-blue-200 hover:text-white border-blue-200 hover:border-white leading-none"-->
+<!--              to="/create"-->
+<!--            >-->
+<!--              create-->
+<!--            </router-link>-->
           </div>
         </div>
       </div>

@@ -29,9 +29,17 @@ const axios = require('axios');
     mounted(){
       console.log("The APP has mounted");
       this.setAllState();
-      setInterval(()=>{
-        this.setAllState()
-      }, 5000)
+      const tabID = sessionStorage.tabID ? sessionStorage.tabID : sessionStorage.tabID = Math.random();
+      if (parseFloat(this.$store.getters['instances/activeInstance'].instanceId) === tabID ) {
+        console.log("We have the same activeInstance in vuex");
+        console.log(this.$store.getters['instances/activeInstance'].instanceId);
+      } else {
+        console.log("Active instance does not match or is not declared.");
+        console.log(tabID);
+        console.log(this.$store.getters['instances/activeInstance'].instanceId);
+        const data = { instanceId: tabID, activePanels: [ "left", "center", "right" ] };
+        this.$store.commit('instances/setActiveInstancePanels', data);
+      }
     },
     methods: {
       setAllState(){

@@ -2,12 +2,17 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import items from './modules/mod1'
+import instances from './modules/instances'
+import VuexPersistence from 'vuex-persist'
+
+let vuexLocal = new VuexPersistence();
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
-    items
+    items,
+    instances
   },
   state: {
     dirName: [
@@ -60,7 +65,12 @@ export default new Vuex.Store({
       state.dirName = newState.dirName;
       state.totalImages = newState.totalImages;
       state.totalUsage = newState.totalUsage;
+    },
+    setStateKey(state, key, keyState){
 
     }
-  }
-})
+  },
+    plugins: [vuexLocal.plugin]
+},
+
+)

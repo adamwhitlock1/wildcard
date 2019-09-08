@@ -33,7 +33,7 @@
       // The value to display.
       value: {
         type: Number,
-        defualt: 0
+        default: 100
       },
 
       // The color of the box.
@@ -99,9 +99,9 @@
 
       // Draw the text
       ctx.fillStyle = '#000'
-      ctx.font = '28px sans-serif';
+      ctx.font = '24px sans-serif';
       ctx.textAlign = 'center';
-      ctx.fillText(Math.floor(this.value), (newBox.x + (newBox.w / 2)), newBox.y - 14)
+      ctx.fillText(this.value, (newBox.x + (newBox.w / 2)), newBox.y - 14)
     }
   }
 </script>

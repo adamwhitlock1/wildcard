@@ -24,7 +24,9 @@ $collector->get('/{t}/{w}/{h}', function($t, $w, $h ){
     }
     $img = new ImageManager(array('driver' => 'imagick'));
     $path = useUtils()->genPic($t);
-    return $img->make($path)->fit($w, $h)->response("jpg", 60);
+    $response = $img->make($path)->fit($w, $h)->response("jpg", 60);
+    unset($path);
+    return $response;
 });
 
 $collector->get('/stats', function() {

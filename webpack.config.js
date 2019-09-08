@@ -22,6 +22,7 @@ const config = {
 		path: path.resolve( __dirname, 'dist' )
   },
 
+
   plugins: [
 		new VueLoaderPlugin(),
 		new BrowserSyncPlugin({

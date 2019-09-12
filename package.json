@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "An image placeholder service.",
   "main": "index.js",
-  "repository": "https://github.com/madwire-media/madnify.git",
   "author": "adam.whitlock@madwiremedia.com",
   "license": "MIT",
   "scripts": {
-    "watch": "webpack --mode development --progress --colors --watch --hide-modules",
     "build": "webpack --mode production",
-    "servePHP": "php -S 127.0.0.1:9999",
+    "checkPHAN": "cat phan-result.txt | cut -d ' ' -f2 | sort | uniq -c | sort -n -r",
     "compile": "webpack --mode development --progress --colors --watch --hide-modules",
     "cypress": "cypress open",
-    "serveE2E": "WAIT_FOR_MESSAGE='Reloading Browsers...' cypressAppWatcher npm run compile"
+    "regen": "composer dump-autoload -o",
+    "runPHAN": "php vendor/bin/phan --progress-bar -o phan-result.txt",
+    "servePHP": "php -S 127.0.0.1:9999",
+    "serveE2E": "WAIT_FOR_MESSAGE='Reloading Browsers...' cypressAppWatcher npm run compile",
+    "watch": "webpack --mode development --progress --colors --watch --hide-modules"
   },
   "babel": {
     "presets": [

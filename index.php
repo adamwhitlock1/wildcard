@@ -1,5 +1,5 @@
 <?php
-require_once "../vendor/autoload.php";
+require_once "./vendor/autoload.php";
 
 use App\Utils;
 use Phroute\Phroute\RouteCollector;
@@ -47,7 +47,8 @@ $collector->get('/data', function() {
         array(
             "dirName" => useUtils()->getDirData(),
             "totalImages" => useUtils()->getImageTotal(),
-            "totalUsage" => useUtils()->readStats()->count
+            "totalUsage" => useUtils()->readStats()->count,
+            "debug" => useUtils()->getDebug()
         )
     );
 });

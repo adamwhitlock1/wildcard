@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="ssl force htaccess">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+    <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/utils.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/components/card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/pages/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/pages/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frontend/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/store/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/stats.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +172,7 @@
       <workItem from="1568049857998" duration="5314000" />
       <workItem from="1568059346835" duration="1402000" />
       <workItem from="1568136768682" duration="1000" />
-      <workItem from="1568740629294" duration="92000" />
+      <workItem from="1568740629294" duration="4491000" />
     </task>
     <task id="LOCAL-00001" summary="built homepage design">
       <created>1567395997273</created>
@@ -248,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567924000320</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ssl force htaccess / stats">
+      <created>1568740738307</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1568740738307</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,6 +297,7 @@
     <MESSAGE value="broadcast js for multi window interface of the future" />
     <MESSAGE value="working on interactive editor" />
     <MESSAGE value="update stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="update stats" />
+    <MESSAGE value="ssl force htaccess / stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="ssl force htaccess / stats" />
   </component>
 </project>

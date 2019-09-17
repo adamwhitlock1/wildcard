@@ -58,7 +58,8 @@ export default new Vuex.Store({
       }
     ],
     totalImages: 961,
-    totalUsage: 7
+    totalUsage: 7,
+    urlString: "https://wildcard:8890"
   },
   mutations: {
     setAllState(state, newState) {

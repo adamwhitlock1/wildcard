@@ -44,7 +44,7 @@ const axios = require('axios');
     methods: {
       setAllState(){
         axios.get('/data').then((res)=>{
-          // console.log(res.data);
+          console.log(res.data);
           this.$store.commit('setAllState', res.data)
         })
       }

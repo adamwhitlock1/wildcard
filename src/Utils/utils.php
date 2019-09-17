@@ -78,19 +78,19 @@ class Utils {
         $filename = $this->_path . "/stats.json";
         $contents = $this->readStats();
         if ($filename) {
-            return false;
-        }
-        $handle = fopen($filename, "w+");
-        $stats = array( "count" => $contents->count + 1);
-        if ($handle) {
-            $stats_encode = json_encode($stats);
-            if ($stats_encode) {
-                fwrite($handle, $stats_encode);
+            $handle = fopen($filename, "w+");
+            $stats = array( "count" => $contents->count + 1);
+            if ($handle) {
+                $stats_encode = json_encode($stats);
+                if ($stats_encode) {
+                    fwrite($handle, $stats_encode);
+                }
+                fclose($handle);
+                return json_encode($stats);
             }
-            fclose($handle);
-            return json_encode($stats);
+            return '$handle invalid in updateStats()';
         }
-        return false;
+        return '$filename invalid in updateStats()';
     }
 
     public function getDirNames(){

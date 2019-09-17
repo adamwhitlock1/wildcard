@@ -3,7 +3,7 @@ const path = require( 'path' );
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 
-const proxy_url = "http://localhost:9999";
+const proxy_url = "https://wildcard:8890";
 // Configuration object.
 const config = {
 	// Create the entry points.

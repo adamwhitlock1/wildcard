@@ -11,7 +11,7 @@
       <div class="w-full md:w-1/2 px-4 mt-4">
         <card
                 header='wildcard.fun/r/{w}/{h}'
-                example="wildcard.fun/r/250/250"
+                example="/r/250/250"
                 example-description="Results in a random critter image at 250px wide by 250px high."
         ></card>
       </div>
@@ -19,7 +19,7 @@
       <div class="w-full md:w-1/2 px-4 mt-4">
         <card
                 header="wildcard.fun/{category}/{w}/{h}"
-                example="wildcard.fun/dog/250/250"
+                example="/dog/250/250"
                 example-description="Get a categorical image from:  cat, dog, bird, bug, tiger, lion, fish"
         ></card>
       </div>

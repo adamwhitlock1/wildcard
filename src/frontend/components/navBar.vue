@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="flex text-center">
-      <div class="w-1/4">
-        <h1 class="text-4xl font-black text-blue-800 leading-none">
-          <span class="text-6xl">*</span> wildcard
-        </h1>
+      <div class="w-1/4 text-center content-center">
+        <img class="w-2/3 mx-auto" src="/public/WildcardLogo.png">
       </div>
       <div
         class="w-3/4 py-4 mt-1 bg-blue-900 border-b-4 border-blue-300 border-solid rounded-lg"

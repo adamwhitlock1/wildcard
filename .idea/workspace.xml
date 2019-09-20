@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/WildcardLogo.png" afterDir="false" />
+    <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="updated logo">
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/frontend/components/navBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/frontend/components/navBar.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/stats.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,7 +68,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="/usr/local/lib/node_modules/prettier" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Templates" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -164,7 +162,12 @@
       <workItem from="1568049857998" duration="5314000" />
       <workItem from="1568059346835" duration="1402000" />
       <workItem from="1568136768682" duration="1000" />
-      <workItem from="1568740629294" duration="5626000" />
+      <workItem from="1568740629294" duration="6045000" />
+      <workItem from="1568757739295" duration="51000" />
+      <workItem from="1568757864595" duration="182000" />
+      <workItem from="1568904553912" duration="1328000" />
+      <workItem from="1568989071974" duration="210000" />
+      <workItem from="1569015182646" duration="492000" />
     </task>
     <task id="LOCAL-00001" summary="built homepage design">
       <created>1567395997273</created>
@@ -264,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568746104040</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="updated logo">
+      <created>1568747638509</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1568747638509</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +308,7 @@
     <MESSAGE value="update stats" />
     <MESSAGE value="ssl force htaccess / stats" />
     <MESSAGE value="fixed stat updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed stat updates" />
+    <MESSAGE value="updated logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated logo" />
   </component>
 </project>

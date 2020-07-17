@@ -1,7 +1,7 @@
 <?php
 require_once "./vendor/autoload.php";
 
-use App;
+use App\Utils;
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\Dispatcher;
 use Intervention\Image\ImageManager;
@@ -14,7 +14,7 @@ $collector->get('/', function () {
 
 function useUtils()
 {
-    return new App\Utils\Utils();
+    return new Utils\Utils();
 }
 
 $collector->get('/{t}/{w}/{h}', function ($t, $w, $h) {

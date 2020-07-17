@@ -18,10 +18,7 @@
       >
         <p class="w-full mt-1 font-black text-green-200 text-sm">
           Ex:
-          <a
-            :href="'wildcard.codestuff.io' + example"
-            target="_blank"
-            class="underline"
+          <a :href="example" target="_blank" class="underline"
             >wildcard.codestuff.io{{ example }}</a
           >
         </p>
@@ -48,7 +45,7 @@ export default {
     },
     example: {
       type: String,
-      default: "wildcard.codestuff.io/r/200/300"
+      default: "/r/200/300"
     },
     exampleDescription: {
       type: String,

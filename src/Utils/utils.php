@@ -1,9 +1,10 @@
 <?php
-namespace App;
+namespace App\Utils;
 
 use FilesystemIterator;
 
-class Utils {
+class Utils
+{
 
     /** @var string */
     private $_path;
@@ -31,16 +32,17 @@ class Utils {
     public function randomPic($dir)
     {
         $this->_files = glob($dir . '/*.*');
-        if ( $this->_files !== false ) {
+        if ($this->_files !== false) {
             $this->_file_index = intval(array_rand($this->_files));
         }
         return $this->_files[$this->_file_index];
     }
 
-    public function getDebug() {
+    public function getDebug()
+    {
         $this->_dir = $this->_path . "/public/dog";
         $this->_files = glob($this->_dir . '/*.*');
-        if ( $this->_files !== false ) {
+        if ($this->_files !== false) {
             $this->_file_index = intval(array_rand($this->_files));
         }
         return gettype($this->_files);
@@ -53,7 +55,7 @@ class Utils {
     public function randomDir($dir)
     {
         $this->_dirs = glob($dir . '/*/');
-        if ( $this->_dirs !== false ) {
+        if ($this->_dirs !== false) {
             $this->_rand_dir_index = intval(array_rand($this->_dirs));
             return $this->_dirs[$this->_rand_dir_index];
         }
@@ -93,11 +95,12 @@ class Utils {
         return '$filename invalid in updateStats()';
     }
 
-    public function getDirNames(){
+    public function getDirNames()
+    {
         $dir = $this->_path . "/public";
         $dirs = glob($dir . '/*/');
         $res = array();
-        foreach ( $dirs as $dirname ) {
+        foreach ($dirs as $dirname) {
             $arr = explode('/', $dirname);
             $index = count($arr) - 2;
             $res[] = $arr[$index];
@@ -105,15 +108,16 @@ class Utils {
         return $res;
     }
 
-    public function getDirData(){
+    public function getDirData()
+    {
         $dir = $this->_path . "/public";
         $dirs = glob($dir . '/*/');
         $res = array();
-        foreach ( $dirs as $dirname ) {
+        foreach ($dirs as $dirname) {
             $arr = explode('/', $dirname);
             $index = count($arr) - 2;
             $fi = new FilesystemIterator($this->_path . "/public/" . $arr[$index], FilesystemIterator::SKIP_DOTS);
-            $res[] = array (
+            $res[] = array(
                 "name" => $arr[$index],
                 "total" => iterator_count($fi)
             );
@@ -122,20 +126,20 @@ class Utils {
         // return json_encode($dirs);
     }
 
-    public function getImageTotal() {
+    public function getImageTotal()
+    {
         $total = 0;
-        foreach ($this->getDirNames() as $dir){
+        foreach ($this->getDirNames() as $dir) {
             $fi = new FilesystemIterator($this->_path . "/public/" . $dir, FilesystemIterator::SKIP_DOTS);
             $total = $total + iterator_count($fi);
         }
         return $total;
-
     }
 
     public function genPic($t)
     {
         $haystack = $this->getDirNames();
-        if ( in_array($t, $haystack, true) ) {
+        if (in_array($t, $haystack, true)) {
             $this->_dir = $this->_path . "/public/" . $t;
         } else {
             $this->_dir = $this->randomDir($this->_path . "/public");

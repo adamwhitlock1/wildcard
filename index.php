@@ -1,7 +1,7 @@
 <?php
 require_once "./vendor/autoload.php";
 
-
+use App;
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\Dispatcher;
 use Intervention\Image\ImageManager;

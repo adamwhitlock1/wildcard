@@ -4,7 +4,6 @@ Thumbs.db
 
 # Dependencies
 node_modules/
-vendor/
 
 # Dev/Build Artifacts
 jsconfig.json

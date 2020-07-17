@@ -8,15 +8,16 @@ use Intervention\Image\ImageManager;
 
 $collector = new RouteCollector();
 
-$collector->get('/', function(){
+$collector->get('/', function () {
     require_once "index.view.php";
 });
 
-function useUtils() {
+function useUtils()
+{
     return new Utils();
 }
 
-$collector->get('/{t}/{w}/{h}', function($t, $w, $h ){
+$collector->get('/{t}/{w}/{h}', function ($t, $w, $h) {
     //create instance of image manager and use image magick for driver
     if ($w > 2000 || $h > 2000) {
         $w = 2000;
@@ -29,11 +30,11 @@ $collector->get('/{t}/{w}/{h}', function($t, $w, $h ){
     return $response;
 });
 
-$collector->get('/stats', function() {
+$collector->get('/stats', function () {
     return useUtils()->updateStats();
 });
 
-$collector->get('/homepage', function() {
+$collector->get('/homepage', function () {
     return json_encode(
         array(
             "dirName" => useUtils()->getDirNames(),
@@ -42,7 +43,7 @@ $collector->get('/homepage', function() {
     );
 });
 
-$collector->get('/data', function() {
+$collector->get('/data', function () {
     return json_encode(
         array(
             "dirName" => useUtils()->getDirData(),
@@ -53,8 +54,8 @@ $collector->get('/data', function() {
     );
 });
 
-$collector->get('/dirs', function() {
-    return json_encode(useUtils()->getDirNames() );
+$collector->get('/dirs', function () {
+    return json_encode(useUtils()->getDirNames());
 });
 
 
@@ -65,9 +66,3 @@ echo $response;
 
 
 //echo json_encode($path);
-
-
-
-
-
-

@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="updated logo">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+    <list default="true" id="9ca6ae31-4b34-4c4d-9102-cc3495b35048" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats.json" beforeDir="false" afterPath="$PROJECT_DIR$/stats.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +165,8 @@
       <workItem from="1568757864595" duration="182000" />
       <workItem from="1568904553912" duration="1328000" />
       <workItem from="1568989071974" duration="210000" />
-      <workItem from="1569015182646" duration="492000" />
+      <workItem from="1569015182646" duration="1157000" />
+      <workItem from="1569245117703" duration="484000" />
     </task>
     <task id="LOCAL-00001" summary="built homepage design">
       <created>1567395997273</created>
@@ -274,7 +273,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568747638509</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="htaccess for ssl still having issues">
+      <created>1569015722973</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1569015722973</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +315,7 @@
     <MESSAGE value="ssl force htaccess / stats" />
     <MESSAGE value="fixed stat updates" />
     <MESSAGE value="updated logo" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated logo" />
+    <MESSAGE value="htaccess for ssl still having issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="htaccess for ssl still having issues" />
   </component>
 </project>

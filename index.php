@@ -10,7 +10,7 @@ use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\Dispatcher;
 use Intervention\Image\ImageManager;
 
-ini_set('error_log', '/Users/adam/Documents/GitHub/wildcard/logs/php_error.log');
+// ini_set('error_log', 'some_file.log');
 
 $collector = new RouteCollector();
 

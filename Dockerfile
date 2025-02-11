@@ -33,11 +33,14 @@ ENV COMPOSER_NO_INTERACTION=1
 # Update dependencies to be compatible with PHP 8.1
 RUN composer update --no-dev --no-scripts --no-autoloader
 
-# Copy the entire application
-COPY . .
-
 # Create necessary directories
 RUN mkdir -p /var/www/html/logs /var/www/html/public
+
+# Copy the public directory first to ensure it's not overwritten
+COPY public /var/www/html/public/
+
+# Copy the rest of the application
+COPY . .
 
 # Create entrypoint script
 RUN echo '#!/bin/bash\n\
@@ -53,6 +56,8 @@ chmod 664 /var/www/html/logs/php_error.log\n\
 # Debug information\n\
 echo "Listing /var/www/html/public directory:"\n\
 ls -la /var/www/html/public\n\
+echo "Listing subdirectories:"\n\
+ls -la /var/www/html/public/*/\n\
 \n\
 apache2-foreground' > /usr/local/bin/docker-entrypoint.sh
 

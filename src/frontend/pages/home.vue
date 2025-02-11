@@ -23,6 +23,49 @@
         ></card>
       </div>
     </div>
+    <div class="w-full px-4 mt-4">
+      <p class="text-4xl pt-12 font-hairline w-full text-center">Categories</p>
+      <div class="w-full flex flex-wrap">
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Bird</p>
+          <img src="/public/bird/250/250" alt="Bird" class="w-full h-auto" />
+        </div>
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Bug</p>
+          <img src="/public/bug/250/250" alt="Bug" class="w-full h-auto" />
+        </div>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Cat</p>
+          <img src="/public/cat/250/250" alt="Cat" class="w-full h-auto" />
+        </div>
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Dog</p>
+          <img src="/public/dog/250/250" alt="Dog" class="w-full h-auto" />
+        </div>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Fish</p>
+          <img src="/public/fish/250/250" alt="Fish" class="w-full h-auto" />
+        </div>
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Lion</p>
+          <img src="/public/lion/250/250" alt="Lion" class="w-full h-auto" />
+        </div>
+      </div>
+      <div class="w-full flex flex-wrap">
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Tiger</p>
+          <img src="/public/tiger/250/250" alt="Tiger" class="w-full h-auto" />
+        </div>
+        <div class="w-1/2 px-4 mt-4">
+          <p class="text-2xl font-hairline w-full text-center">Potato</p>
+          <img src="/public/potato/250/250" alt="Potato" class="w-full h-auto" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

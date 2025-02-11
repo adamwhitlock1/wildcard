@@ -42,27 +42,6 @@ COPY public /var/www/html/public/
 # Copy the rest of the application
 COPY . .
 
-# Create entrypoint script
-RUN echo '#!/bin/bash\n\
-if [ ! -f /var/www/html/stats.json ]; then\n\
-    echo "{\"count\": 0}" > /var/www/html/stats.json\n\
-fi\n\
-touch /var/www/html/logs/php_error.log\n\
-chown -R www-data:www-data /var/www/html\n\
-chmod -R 755 /var/www/html\n\
-chmod 664 /var/www/html/stats.json\n\
-chmod 664 /var/www/html/logs/php_error.log\n\
-\n\
-# Debug information\n\
-echo "Listing /var/www/html/public directory:"\n\
-ls -la /var/www/html/public\n\
-echo "Listing subdirectories:"\n\
-ls -la /var/www/html/public/*/\n\
-\n\
-apache2-foreground' > /usr/local/bin/docker-entrypoint.sh
-
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-
 # Generate optimized autoload files
 RUN composer dump-autoload --optimize
 
@@ -73,6 +52,3 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 
 # Expose port 80
 EXPOSE 80
-
-# Set the entrypoint
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]

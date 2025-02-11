@@ -1,12 +1,8 @@
 RewriteEngine On
-RewriteCond %{HTTPS} !on
-RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
-
-<IfModule mod_rewrite.c>
-RewriteEngine On
 RewriteBase /
-RewriteRule ^index\.php$ - [L]
+
+# If the request is not for a file or directory
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-</IfModule>
+# Route everything through index.php
+RewriteRule ^(.*)$ index.php [QSA,L]

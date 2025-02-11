@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/var/www/html/public
+      - ./logs:/var/www/html/logs
+      - ./stats.json:/var/www/html/stats.json
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html

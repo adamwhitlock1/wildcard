@@ -15,7 +15,6 @@ class RouteCollector implements RouteDataProviderInterface {
      *
      */
     const DEFAULT_CONTROLLER_ROUTE = 'index';
-
     /**
      *
      */
@@ -404,7 +403,7 @@ class RouteCollector implements RouteDataProviderInterface {
      */
     private function trim($route)
     {
-        return trim($route, '/');
+        return trim($route ?: "", '/');
     }
 
     /**

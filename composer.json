@@ -4,7 +4,8 @@
     "guzzlehttp/guzzle": "^6.3",
     "intervention/image": "^2.5",
     "phroute/phroute": "^2.1",
-    "ext-json": "*"
+    "ext-json": "*",
+    "php": "^8.1"
   },
   "authors": [
     {
@@ -16,8 +17,5 @@
     "psr-4": {
       "App\\": "src\\"
     }
-  },
-  "require-dev": {
-    "phan/phan": "^2.2"
   }
 }

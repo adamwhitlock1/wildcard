@@ -36,14 +36,22 @@ RUN composer update --no-dev --no-scripts --no-autoloader
 # Copy the entire application
 COPY . .
 
-# Create necessary directories and set permissions
-RUN mkdir -p /var/www/html/logs && \
-    touch /var/www/html/logs/php_error.log && \
-    touch /var/www/html/stats.json && \
-    chown -R www-data:www-data /var/www/html && \
-    chmod -R 755 /var/www/html && \
-    chmod 664 /var/www/html/stats.json && \
-    chmod 664 /var/www/html/logs/php_error.log
+# Create necessary directories
+RUN mkdir -p /var/www/html/logs
+
+# Create entrypoint script
+RUN echo '#!/bin/bash\n\
+if [ ! -f /var/www/html/stats.json ]; then\n\
+    echo "{\"count\": 0}" > /var/www/html/stats.json\n\
+fi\n\
+touch /var/www/html/logs/php_error.log\n\
+chown -R www-data:www-data /var/www/html\n\
+chmod -R 755 /var/www/html\n\
+chmod 664 /var/www/html/stats.json\n\
+chmod 664 /var/www/html/logs/php_error.log\n\
+apache2-foreground' > /usr/local/bin/docker-entrypoint.sh
+
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
 # Generate optimized autoload files
 RUN composer dump-autoload --optimize
@@ -55,3 +63,6 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 
 # Expose port 80
 EXPOSE 80
+
+# Set the entrypoint
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]

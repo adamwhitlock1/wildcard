@@ -26,15 +26,17 @@ class Utils
 
     public function __construct()
     {
-        $this->_path = $_SERVER['DOCUMENT_ROOT'];
+        $this->_path = '/var/www/html';
     }
 
     public function randomPic($dir)
     {
         $this->_files = glob($dir . '/*.*');
-        if ($this->_files !== false) {
-            $this->_file_index = intval(array_rand($this->_files));
+        if ($this->_files === false || empty($this->_files)) {
+            error_log("No files found in directory: " . $dir);
+            return false;
         }
+        $this->_file_index = array_rand($this->_files);
         return $this->_files[$this->_file_index];
     }
 
@@ -55,11 +57,12 @@ class Utils
     public function randomDir($dir)
     {
         $this->_dirs = glob($dir . '/*/');
-        if ($this->_dirs !== false) {
-            $this->_rand_dir_index = intval(array_rand($this->_dirs));
-            return $this->_dirs[$this->_rand_dir_index];
+        if ($this->_dirs === false || empty($this->_dirs)) {
+            error_log("No directories found in: " . $dir);
+            return false;
         }
-        return "error getting random directory";
+        $this->_rand_dir_index = array_rand($this->_dirs);
+        return $this->_dirs[$this->_rand_dir_index];
     }
 
     public function readStats()
@@ -179,9 +182,21 @@ class Utils
         if (in_array($t, $haystack, true)) {
             $this->_dir = $this->_path . "/public/" . $t;
         } else {
-            $this->_dir = $this->randomDir($this->_path . "/public");
+            $randomDir = $this->randomDir($this->_path . "/public");
+            if ($randomDir === false) {
+                error_log("Failed to get random directory");
+                return false;
+            }
+            $this->_dir = $randomDir;
         }
+
+        $pic = $this->randomPic($this->_dir);
+        if ($pic === false) {
+            error_log("Failed to get random picture from " . $this->_dir);
+            return false;
+        }
+
         $this->updateStats();
-        return $this->randomPic($this->_dir);
+        return $pic;
     }
 }

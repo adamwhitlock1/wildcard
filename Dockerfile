@@ -37,7 +37,7 @@ RUN composer update --no-dev --no-scripts --no-autoloader
 COPY . .
 
 # Create necessary directories
-RUN mkdir -p /var/www/html/logs
+RUN mkdir -p /var/www/html/logs /var/www/html/public
 
 # Create entrypoint script
 RUN echo '#!/bin/bash\n\
@@ -49,6 +49,11 @@ chown -R www-data:www-data /var/www/html\n\
 chmod -R 755 /var/www/html\n\
 chmod 664 /var/www/html/stats.json\n\
 chmod 664 /var/www/html/logs/php_error.log\n\
+\n\
+# Debug information\n\
+echo "Listing /var/www/html/public directory:"\n\
+ls -la /var/www/html/public\n\
+\n\
 apache2-foreground' > /usr/local/bin/docker-entrypoint.sh
 
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh

@@ -64,13 +64,25 @@ class Utils
 
     public function readStats()
     {
-        $contents = file_get_contents("stats.json");
-        if ($contents) {
+        $filename = $this->_path . "/stats.json";
+        if (!file_exists($filename)) {
+            // Initialize the file if it doesn't exist
+            file_put_contents($filename, json_encode(array("count" => 0)));
+        }
+
+        $handle = fopen($filename, 'r');
+        if ($handle) {
+            // Acquire a shared (read) lock
+            flock($handle, LOCK_SH);
+            $contents = fread($handle, filesize($filename));
+            // Release the lock
+            flock($handle, LOCK_UN);
+            fclose($handle);
+
             return json_decode($contents);
         }
         return false;
     }
-
 
     /**
      * @return bool|false|string
@@ -78,21 +90,46 @@ class Utils
     public function updateStats()
     {
         $filename = $this->_path . "/stats.json";
-        $contents = $this->readStats();
-        if ($filename) {
-            $handle = fopen($filename, "w+");
-            $stats = array( "count" => $contents->count + 1);
-            if ($handle) {
-                $stats_encode = json_encode($stats);
-                if ($stats_encode) {
+
+        // Open with c+ to create if doesn't exist and allow read/write
+        $handle = fopen($filename, "c+");
+
+        if ($handle) {
+            try {
+                // Acquire an exclusive lock
+                if (flock($handle, LOCK_EX)) {
+                    // Read current contents
+                    $contents = fread($handle, filesize($filename) ?: 1);
+                    $stats = json_decode($contents);
+
+                    if (!$stats) {
+                        // Initialize if invalid JSON or empty file
+                        $stats = (object) array("count" => 0);
+                    }
+
+                    // Update the count
+                    $stats->count++;
+
+                    // Reset file pointer to beginning
+                    ftruncate($handle, 0);
+                    rewind($handle);
+
+                    // Write new contents
+                    $stats_encode = json_encode($stats);
                     fwrite($handle, $stats_encode);
+
+                    // Release the lock
+                    flock($handle, LOCK_UN);
+
+                    return $stats_encode;
                 }
+                return 'Could not acquire lock in updateStats()';
+            } finally {
+                // Always close the handle
                 fclose($handle);
-                return json_encode($stats);
             }
-            return '$handle invalid in updateStats()';
         }
-        return '$filename invalid in updateStats()';
+        return 'Could not open file in updateStats()';
     }
 
     public function getDirNames()

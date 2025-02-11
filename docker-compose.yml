@@ -8,6 +8,5 @@ services:
     volumes:
       - ./public:/var/www/html/public
       - ./logs:/var/www/html/logs
-      - ./stats.json:/var/www/html/stats.json
     environment:
       - APACHE_DOCUMENT_ROOT=/var/www/html

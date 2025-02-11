@@ -53,10 +53,6 @@ ENV APACHE_DOCUMENT_ROOT /var/www/html
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
 
-# Create stats.json with proper permissions if it doesn't exist
-RUN touch stats.json && \
-    chown www-data:www-data stats.json && \
-    chmod 664 stats.json
 
 # Add debug information
 RUN echo "<?php phpinfo(); ?>" > /var/www/html/info.php

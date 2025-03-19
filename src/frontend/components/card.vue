@@ -2,11 +2,11 @@
   <div
     class="p-6 bg-gray-200 border-b-4 border-gray-400 text-white rounded-lg shadow-lg flex"
   >
-    <div class="w-1/2">
+    <div class="w-full md:w-1/2">
       <img class="rounded shadow-lg" :src="example" />
     </div>
 
-    <div class="w-1/2 p-1 flex-no-wrap">
+    <div class="w-full md:w-1/2 p-1 flex-no-wrap">
       <h3
         class="w-full text-green-600 text-sm tracking-tight font-mono text-center"
       >

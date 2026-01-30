@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Placeholder image service for wild animals.</title>
     <link rel="stylesheet" href="styles/tailwind.min.css">
+    <script defer src="https://umami.codestuff.io/script.js" data-website-id="a597a1d3-8fbe-4fa2-8d82-58fbf2130e8e"></script>
 </head>
 <body>
 
